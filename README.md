@@ -29,6 +29,7 @@ Number of edges: 19755
 Average degree:   3.8468
 Avg. Clustering: 0.11161
 Avg. PathLength: 6.29308
+Assortativity: -0.13337
 ```
 
 These networks have a remarkably high clustering coefficient. Upon investigation, however, this is likely due to the disassortative nature of this network, with many 2-degree nodes (many spoke-like structures).
@@ -65,6 +66,17 @@ Number of edges: 18652
 Average degree:   3.6320
 Avg. Clustering: 0.00283
 Avg. PathLength: 5.24944
+Assortativity: 0.03367
+PS C:\Users\Yiheng\OneDrive - Washington University in St. Louis\20_Fall\ESE526_NetworkScience\onlineBarabasiAlbert> python test.py -n 10271 -m 1 -p 0.48 -fname match --show
+Name:
+Type: Graph
+Number of nodes: 10271
+Number of edges: 19652
+Average degree:   3.8267
+Avg. Clustering: 0.00222
+Avg. PathLength: 5.12619
+Assortativity: 0.03181
+Powerlaw fit exponent: 2.574
 PS C:\Users\Yiheng\OneDrive - Washington University in St. Louis\20_Fall\ESE526_NetworkScience\onlineBarabasiAlbert> python test.py -n 10271 -m 2 -fname match
 Name:
 Type: Graph
@@ -73,6 +85,7 @@ Number of edges: 20538
 Average degree:   3.9992
 Avg. Clustering: 0.00301
 Avg. PathLength: 5.40704
+Assortativity: -0.00445
 ```
 
 Analytically, we would expect the average pathlength in the generated networks to approximate ![logN/loglogN](https://render.githubusercontent.com/render/math?math=\frac{\log%28N%29}{\log\log%28N%29}) which is 6.64924 for the case of ![N=10271](https://render.githubusercontent.com/render/math?math=N%3D10271). However, for the case (N=10271,M=2), we have a much lower 5.40704 value instead, possible due to the low N?
